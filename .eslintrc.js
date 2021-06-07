@@ -1,5 +1,6 @@
 module.exports = {
   root: true,
+  "ignorePatterns": ["index.html"],
   overrides: [
     {
       files: ['*.ts'],
