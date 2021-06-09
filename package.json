@@ -5,9 +5,10 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
-    "lint:auto-fix": "ng lint --fix",
+    "lint": "ng lint --fix",
     "pretter": "prettier --write ./src//*.{html,ts}",
-    "stylelint": "stylelint /*.scss --fix"
+    "stylelint": "stylelint src/**/*.scss --fix",
+    "postinstall": "husky install"
   },
   "private": true,
   "dependencies": {
