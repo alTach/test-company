@@ -1,1 +1,27 @@
-<p>table works!</p>
+<div class="f-table-actions">
+  <button class="btn btn-sm f-table__btn-copy">Copy table</button>
+  <button class="btn f-table__btn-close"><img src="assets/close-icon.jpg"></button>
+</div>
+<table class="f-table">
+  <thead class="f-table__head">
+  <th class="f-table-head__item t-cell">Name</th>
+  <th class="f-table-head__item t-cell">Surname</th>
+  <th class="f-table-head__item t-cell">Age</th>
+  <th class="f-table-head__item t-cell">City</th>
+  <th class="f-table-head__item t-cell"></th>
+  </thead>
+  <tbody class="f-table__body f-table-body">
+  <tr *ngFor="let item of data | fixMinimalRowForTable" class="t-table__row">
+    <td class="f-table-body__item t-cell">{{item.name}}</td>
+    <td class="f-table-body__item t-cell">{{item.surname}}</td>
+    <td class="f-table-body__item t-cell">{{item.age}}</td>
+    <td class="f-table-body__item t-cell">{{item.city}}</td>
+    <td class="f-table-body__item t-cell">
+      <div class="t-cell__actions">
+        <button class="t-cell__action t-cell-action t-cell-action__edit" (click)="onEdit()">Edit</button>
+        <button class="t-cell__action t-cell-action t-cell-action__del" (click)="onDelete()">Delete</button>
+      </div>
+    </td>
+  </tr>
+  </tbody>
+</table>

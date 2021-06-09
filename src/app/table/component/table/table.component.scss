@@ -1,0 +1,87 @@
+@import "src/style/variable/color";
+
+:host {
+  display: inline-block;
+  //width: 595px;
+}
+.f-table-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.f-table {
+  border-collapse: collapse;
+}
+
+.f-table__head {
+  background: $blue;
+  color: $gray;
+}
+
+.f-table-head__item {
+  max-width: 250px;
+  &:nth-child(1) {
+    min-width: 100px;
+  }
+  &:nth-child(2) {
+    min-width: 150px;
+  }
+  &:nth-child(3) {
+    min-width: 100px;
+  }
+  &:nth-child(4) {
+    min-width: 80px;
+  }
+  &:nth-child(5) {
+    min-width: 180px;
+  }
+}
+
+.f-table-actions {
+  margin-bottom: 13px;
+}
+.f-table__btn-copy {
+  width: 91px;
+}
+.f-table__btn-close {
+  background: none;
+  padding: 5px;
+  margin-left: 10px;
+}
+
+.f-table__body {
+  background: $white;
+}
+
+.t-table__row {
+
+
+}
+
+.t-cell {
+  height: 36px;
+  padding: 0 10px;
+  &__actions {
+    display: flex;
+  }
+}
+
+.t-cell-action {
+  flex-grow: 1;
+  background: none;
+  border: none;
+  text-decoration: underline;
+  &__edit {
+    color: $navy-blue;
+    margin-right: 5px;
+  }
+  &__del {
+    color: $fire-brick;
+    margin-left: 5px;
+  }
+}
+
+.f-table .t-cell {
+  border: 1px solid $pacific-blue;
+}
